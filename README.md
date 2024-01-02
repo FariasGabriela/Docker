@@ -2,9 +2,6 @@
 
 <p align="center">Projeto destinado a estudos com docker </p>
 
-
-* Topicos:
-
   
 ## Comandos:
 docker ps: containers que estão ativos na minha maquina, rodando nesse exato momento.
