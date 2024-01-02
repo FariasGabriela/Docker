@@ -29,6 +29,7 @@
 Comando: 
 * docker build -t {nome_do_usuario}/{nome_da_imagem} .  : para buildar o projeto
 * docker run -it {nome_do_usuario}/{nome_da_imagem}  : para rodar a imagem
+* -f : para saber qual dockerfile usar: ex: -f dockerfile.prod
 
 
 No dockerfile:
@@ -47,3 +48,14 @@ Tipos: brigde, Host, Overlay, Maclan, Nenhum
 Mais utilizada: brigde, usa para um container se conectar facilmente com outro.
 a host também é utilizada, com menos frequencia.
 
+## Criar image node com arquivo do computador
+docker run --rm -it -v $(pwd)/:/usr/src/app -p 3000:3000 node:15 bash
+
+
+## Utilizando docker-compose
+
+* docker-compose up : subir a aplicação
+* docker-compose up -d : subir a aplicação sem travar o terminal
+* docker-compose ps: lista os containers
+* docker-compose up -d --build: rebuild o container, para caso de mudanças
+* docker-compose down: para o serviço
