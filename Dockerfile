@@ -1,11 +1,11 @@
-# FROM nginx:latest
+FROM nginx:latest
 
-# WORKDIR /app
+#WORKDIR /app
 
-# RUN apt-get update && \
-#     apt-get install vim -y
+RUN apt-get update && \
+    apt-get install vim -y
 
-# COPY html /usr/share/nginx
+COPY html /usr/share/nginx/html
 
 
 # FROM ubuntu:latest
@@ -15,11 +15,11 @@
 # CMD ["Funcionou!"]
 
 
-FROM nginx:latest
+# FROM nginx:latest
 
-COPY html /usr/share/nginx/html
+# COPY html /usr/share/nginx/html
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+# ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ["nginx", "-g", "daemon off;"]
+# CMD ["nginx", "-g", "daemon off;"]
 
