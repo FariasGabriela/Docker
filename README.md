@@ -51,8 +51,16 @@ a host também é utilizada, com menos frequencia.
 ## Criar image node com arquivo do computador
 docker run --rm -it -v $(pwd)/:/usr/src/app -p 3000:3000 node:15 bash
 
+docker exec -it app bash - entrar no container
+ mysql -uroot -p - acessar banco mysql
 
 ## Utilizando docker-compose
+docker compose up -d - subir o container
+
+
+
+
+
 
 * docker-compose up : subir a aplicação
 * docker-compose up -d : subir a aplicação sem travar o terminal
